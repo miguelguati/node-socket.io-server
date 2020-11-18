@@ -16,12 +16,12 @@
         socket.on('disconnect', function(){
             console.log('Perdimos conexión con el server');
         });
-
-        socket.emit('mensaje', {nombre: 'miguel', edad:28});
-
-        socket.on('mensaje', (payload)=>{
-            console.log(payload);
+        
+        socket.on('active-bands', (payload)=>{
+            console.clear();
+            console.table(payload);
         });
+
     </script>
 </body>
 </html>
